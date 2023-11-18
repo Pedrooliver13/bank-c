@@ -89,6 +89,34 @@ void main()
         printf("Seu saldo atual ficou: R$ %d\n\n", balance);
     }
 
+    void calculateInvestment()
+    {
+        float valueInvestment, monthlyProfitability;
+
+        printf("Digite o valor que deseja investir: R$ ");
+        scanf("%f", &valueInvestment);
+
+        if (valueInvestment > balance)
+        {
+            printf("\n>> Nao tem saldo suficiente! <<\n\n");
+            return;
+        }
+
+        printf("Digite a rentabilidade mensal (porcentagem): ");
+        scanf("%f", &monthlyProfitability);
+
+        float monthlyReturn = (valueInvestment * monthlyProfitability) / 100;
+        float annualReturn = monthlyReturn * 12;
+        float total = valueInvestment + annualReturn;
+
+        printf("Retorno mensal: R$  %.2f\n", monthlyReturn);
+        printf("Retorno anual: R$ %.2f\n", annualReturn);
+        printf("Total investido: R$ %.2f\n", valueInvestment);
+        printf("Rentabilidade: R$ %.2f\n", annualReturn);
+        printf("Total: R$ %.2f\n", total);
+        return;
+    }
+
     void menu()
     {
         int optionSelected, value;
@@ -111,7 +139,8 @@ void main()
             menu();
             break;
         case INVESTMENT_CALCULATOR:
-            printf("Selecionou a calculadora de investimento!");
+            calculateInvestment();
+            menu();
             break;
         default:
             printf("Saiu!");
