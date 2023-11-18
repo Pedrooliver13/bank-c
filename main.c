@@ -3,6 +3,14 @@
 #include <stdbool.h>
 
 /*
+    GRUPO:
+    NOME: PEDRO HENRIQUE DE OLIVEIRA RA: 20230623
+    NOME: ERICK LUIZ ROMUALDO GOLASQUI RA: 20230094
+    NOME: KATHYLEN CRISTINA TAVARES DE SOUZA RA: 20231115
+    NOME: BEATRIZ LOPES ANTUNES RA: 20231705
+ */
+
+/*
     Conceitos utilizados!
     * S do solid: funções com responsabilidade única
     * cleanCode: Nomear as nossas condições e variaveis, e utilizar enum's
